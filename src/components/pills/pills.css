@@ -1,0 +1,76 @@
+#job-pills-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 28px;
+    
+}
+
+#job-pills-list li {
+    display: inline;
+    margin: 4px;
+    margin-top: 4px;
+
+}
+
+.job-pill div {
+    display: inline-block;
+    background-color: #4EE6BF;
+    color: white;
+    padding: 4px;
+    border-radius: 20px;
+    font-size: .6em;
+    margin-right: 1px;
+    float: right;
+}
+
+#job-salary-div {
+    background-color: var(--primary);
+    float: left;
+}
+
+.job-pill span {
+    margin-right: 5px;
+    font-size: 1.3em;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .job-pill div {
+        padding: 3px;
+        font-size: .8em;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        margin-right: 1px;
+
+    }
+
+    #job-pills-list {
+        margin-top: 1px;
+    }
+
+    #job-pills-list li {
+        margin: 2px;
+    }
+
+    .job-pill-text {
+        display: none;
+    }
+
+    .job-pill span {
+        margin-right: 0;
+    }
+
+    #job-salary-div {
+        width: auto;
+        padding: 3px 10px;
+        background-color: var(--primary);
+        font-size: .8em;
+    }
+
+    .job-salary-span {
+        display: inline;
+    }
+  }

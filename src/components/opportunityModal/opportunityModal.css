@@ -1,0 +1,103 @@
+#opportunity-modal-wrapper {
+    width: 60vw;
+}
+
+.opportunity-modal-company-name {
+    float: right;
+}
+
+.opportunity-modal-about-opportunity p {
+    display: inline;
+    color: #4EE6BF;
+    text-indent: 20px;
+}
+
+.opoortunity-modal-options-bts-list {
+    float: right;
+}
+
+.opoortunity-modal-options-bts-list button {
+    margin: 0 8px;
+}
+
+.delete-btn {
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    padding: 0;
+    background-color: #E5493A;
+    border: 2px solid #E5493A;
+    color: white;
+    font-size: 1.2em;
+}
+
+.edit-btn, .apply-btn {
+    height: 40px;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 7px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.apply-btn:hover {
+    color: var(--primary);
+    background-color: white;
+}
+.apply-btn span {
+    margin-right: 8px;  
+}
+
+.opportunity-modal-opportunity-age {
+    color: #d8d8d8;
+    position: relative;
+    top: 10vh;
+}
+
+.opportunity-modal-bookmark-btn {
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    border-radius: 7px;
+    color: var(--primary);
+    font-size: 1.2em;
+    /* padding: 0 10px; */
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    #opportunity-modal-wrapper {
+        max-height: 50vh;
+    }
+    .opportunity-modal-about-company {
+        font-size: .7em;
+    }
+
+    .opoortunity-modal-company-desc {
+        font-size: .7em;
+        margin-bottom: 30px;
+    }
+
+    .opportunity-modal-about-opportunity {
+        font-size: .7em;
+    }
+
+    .opportunity-modal-opportunity-desc {
+        font-size: .7em;
+    }
+
+    .apply-btn {
+        font-size: .8em;
+    }
+
+    .apply-btn span {
+        margin-right: 2px;
+    }
+
+    #pills-wrapper{
+        display: none;
+    }
+  }

@@ -1,0 +1,62 @@
+.job-wrapper {
+    width: 70vw;
+    height: auto;
+    border: 1px solid black;
+    margin: 0 auto;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 8px;
+    padding-bottom: 15px;
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+}
+
+.job-title {
+    float: left;
+    display: block;
+    margin-bottom: 0;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.job-company {
+    float: right;
+    display: block;
+    margin-top: 0;
+    color: #d8d8d8;
+}
+
+.company-desc-wrapper {
+    width: 80vw;
+    height: auto;
+}
+
+.company-desc-text {
+    display: block;
+    text-align: center;
+    font-size: .9em;
+
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .job-wrapper {
+        width: 93vw;
+        margin-bottom: -15px;
+        
+    }
+
+    .job-title {
+        font-size: .8em;
+    }
+
+    .job-company {
+        font-size: .7em;
+        margin-top: -15px;
+        margin-bottom: -15px;
+    }
+    
+  }

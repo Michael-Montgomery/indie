@@ -1,0 +1,13 @@
+#welcome-wrapper-one {
+    height: 70vh;
+    width: 100vw;
+    background-color: #E5912B;
+}
+
+#welcome-wrapper-one {
+    /* height: 100%; */
+    /* width: 50vw; */
+    background-image: url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    float: right;
+    display: inline;
+}
