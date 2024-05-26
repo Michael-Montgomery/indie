@@ -9,6 +9,8 @@ function Header(props) {
                 <NavLink to='/'>Logo</NavLink>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/opportunities'>Opportunities</NavLink>
+                <NavLink to='/employer-dashboard'>EDash</NavLink>
+                <NavLink to='/my-opportunities'>My Opportunities</NavLink>
                 {
                     props.loggedIn ? <UserProfileIcon></UserProfileIcon> : <button className='Sign-up-btn'>SignUp</button>
                 }

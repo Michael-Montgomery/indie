@@ -68,6 +68,8 @@ function Opportunities() {
                 <button className='filters-btn' onClick={openFiltersModal}><span><FontAwesomeIcon icon={faFilter}></FontAwesomeIcon></span>filters</button>
                 <select className='opportunities-dd'>
                     <option>Sort By</option>
+                    <option>Salary (High to Low)</option>
+                    <option>Salary (Low to High)</option>
                 </select>
                 <ul id='opportunities-list-el'>
                     {
@@ -93,7 +95,7 @@ function Opportunities() {
                 contentLabel="Example Modal"
             >
                 <span id='opportunity-modal-close-btn' onClick={closeModal}><FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon></span>
-                <OpportunityModal job={opportunitiesDisplayList[listIndex]} isPostAdmin={false}></OpportunityModal>
+                <OpportunityModal job={opportunitiesDisplayList[listIndex]} isPostAdmin={false} hasApplied={true}></OpportunityModal>
             </Modal>
             <Modal
                 isOpen={filtersModalIsOpen}
@@ -114,7 +116,13 @@ function Opportunities() {
 
                     <details>
                         <summary>Company Benefits</summary>
-                        <input type='checkbox'></input><label>Unlimited PTO</label><br></br>
+                        <input type='checkbox' onChange={(e) => {
+                            if(e.target.checked) {
+                                setopportunitiesDisplayList(opportunitiesDisplayList.filter((val) => val.company.benefits.unlimitedPTO === true))
+                            } else {
+                                setopportunitiesDisplayList(opportunitiesList)
+                            }
+                        }}></input><label>Unlimited PTO</label><br></br>
 
                         <input type='checkbox'></input><label>Annual Bonus Structure</label><br></br>
 
@@ -146,7 +154,7 @@ function Opportunities() {
 
                 </form>
                 <button className='filters-cancel-btn' onClick={closeFiltersModal}>Cancel</button>
-                <button className='filters-save-btn' onClick={closeFiltersModal}>View Opportunities</button>
+                <button className='filters-save-btn' onClick={closeFiltersModal}>View Opportunities {`(${opportunitiesDisplayList.length})`}</button>
             </div>
             </Modal>
         </>

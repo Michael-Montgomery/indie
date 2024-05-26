@@ -1,3 +1,4 @@
+import users from "./users";
 
 
 let opportunitiesList = [
@@ -24,7 +25,21 @@ let opportunitiesList = [
             application: {
                 external: true,
                 externalUrl: 'https://jobs.netflix.com/jobs/332319698'
-            }
+            },
+            applicants: [ {
+                firstName: 'James',
+                lastName: 'Williams',
+                email: 'mrwilliams@gmail.com',
+                phone: 3218908653,
+                state: 'FL'
+            },
+            {
+                firstName: 'Randall',
+                lastName: 'Gellar',
+                email: 'mrwilliams@gmail.com',
+                phone: 3218908653,
+                state: 'FL'
+            }]
         }
     },
     {
@@ -32,7 +47,7 @@ let opportunitiesList = [
             name: 'Apple Inc',
             description: '',
             benefits: {
-                unlimitedPTO: true,
+                unlimitedPTO: false,
                 annualBonus: true,
                 equity: true,
                 fitnessProgram: true,
@@ -50,7 +65,8 @@ let opportunitiesList = [
             application: {
                 external: false,
                 externalUrl: 'https://jobs.netflix.com/jobs/332319698'
-            }
+            },
+            applicants: users
         }
     },
     {
@@ -76,7 +92,8 @@ let opportunitiesList = [
             application: {
                 external: true,
                 externalUrl: 'https://jobs.netflix.com/jobs/332319698'
-            }
+            },
+            applicants: users
         }
     },
     {
@@ -102,7 +119,8 @@ let opportunitiesList = [
             application: {
                 external: true,
                 externalUrl: 'https://jobs.netflix.com/jobs/332319698'
-            }
+            },
+            applicants: users
         }
     },
      {
@@ -128,7 +146,8 @@ let opportunitiesList = [
             application: {
                 external: true,
                 externalUrl: 'https://jobs.netflix.com/jobs/332319698'
-            }
+            },
+            applicants: users
         }
     },
     {
@@ -154,7 +173,8 @@ let opportunitiesList = [
             application: {
                 external: true,
                 externalUrl: 'https://jobs.netflix.com/jobs/332319698'
-            }
+            },
+            applicants: users
         }
     },
     {
@@ -180,7 +200,8 @@ let opportunitiesList = [
             application: {
                 external: true,
                 externalUrl: 'https://jobs.netflix.com/jobs/332319698'
-            }
+            },
+            applicants: users
         }
     },
     {
@@ -206,7 +227,8 @@ let opportunitiesList = [
             application: {
                 external: true,
                 externalUrl: 'https://jobs.netflix.com/jobs/332319698'
-            }
+            },
+            applicants: []
         }
     },
     {
@@ -232,7 +254,8 @@ let opportunitiesList = [
             application: {
                 external: true,
                 externalUrl: 'https://jobs.netflix.com/jobs/332319698'
-            }
+            },
+            applicants: users
         }
     }
 ];

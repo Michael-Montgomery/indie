@@ -31,6 +31,7 @@ summary {
     margin-bottom: 10px;
     margin-right: 10px;
     margin-top: 15px;
+    width: 20vw;
 }
 
 .opportunities-dd {
@@ -41,6 +42,8 @@ summary {
     color: white;
     font-size: 1.2em;
     margin-bottom: 10px;
+    width: 20vw;
+    text-align: center;
     /* font-size: 1.4em; */
 }
 
@@ -89,7 +92,7 @@ summary {
     border: 2px solid var(--primary);
     border-radius: 7px;
     color: white;
-    font-size: 1.2em;
+    font-size: .9em;
     float: right;
     margin-right: 8px;
 }
@@ -107,5 +110,9 @@ summary {
     #filters-wrapper details {
         font-size: .8em;
         margin-bottom: 25px;
+    }
+
+    .filters-btn, .opportunities-dd {
+        width: 35vw;
     }
   }
