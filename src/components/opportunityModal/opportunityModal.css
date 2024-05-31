@@ -1,5 +1,7 @@
 #opportunity-modal-wrapper {
     width: 60vw;
+    max-height: 95vh;
+    overflow-y: scroll;
 }
 
 .opportunity-modal-company-name {
