@@ -62,10 +62,13 @@ console.log(props.applicants.length);
 
                                             <td>05/17/2024 (14 days ago)</td>
                                             <td>
-                                                <ul className='applicant-modal-options-list'>
+                                                <ul className='applicants-modal-options-list'>
                                                     <li>
                                                         <FontAwesomeIcon icon={faFileInvoice}></FontAwesomeIcon>
-                                                        <FontAwesomeIcon icon={faIdCard} onClick={() => {
+                                                        
+                                                    </li>
+                                                    <li>
+                                                    <FontAwesomeIcon icon={faIdCard} onClick={() => {
                                                             setApplicantIndex(idx);
                                                             openContactCardModal()
                                                         }}></FontAwesomeIcon>

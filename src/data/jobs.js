@@ -247,8 +247,8 @@ let opportunitiesList = [
         opportunity: {
             postDate: new Date('2024-04-11 11:13:00'),
             title: 'Senior Software Engineer',
-            payRangeMinInThousands: 122,
-            payRangeMaxInThousands: 149,
+            payRangeMinInThousands: 20,
+            payRangeMaxInThousands: 63,
             description: "At Northrop Grumman, our employees have incredible opportunities to work on revolutionary systems that impact people's lives around the world today, and for generations to come. Our pioneering and inventive spirit has enabled us to be at the forefront of many technological advancements in our nation's history - from the first flight across the Atlantic Ocean, to stealth bombers, to landing on the moon. We look for people who have bold new ideas, courage and a pioneering spirit to join forces to invent the future, and have fun along the way. Our culture thrives on intellectual curiosity, cognitive diversity and bringing your whole self to work — and we have an insatiable drive to do what others think is impossible. Our employees are not only part of history, they're making history.",
             signOnBonus: true,
             application: {

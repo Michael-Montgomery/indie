@@ -1,0 +1,27 @@
+#applicants-list {
+    font-size: 1.3em;
+    text-align: center;
+    /* width: 60vw; */
+}
+
+#applicant-list thead tr td {
+    margin: 0 15px;
+}
+
+#applicants-list td {
+    padding: 10px;
+}
+
+#applicants-list tr:hover {
+    background-color: var(--primary);
+    color: #4EE6BF;
+}
+
+.applicants-modal-options-list {
+    list-style-type: none;
+}
+
+.applicants-modal-options-list li {
+    margin-left: 12px;
+    display: inline;
+}

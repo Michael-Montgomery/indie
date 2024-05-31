@@ -9,6 +9,8 @@ import Modal from 'react-modal';
 import OpportunityModal from '../../components/opportunityModal/opportunityModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faFilter } from '@fortawesome/free-solid-svg-icons';
+import ReactSearchBox from "react-search-box";
+
 
 const opportunityModalCustomStyles = {
     content: {
@@ -24,7 +26,8 @@ const opportunityModalCustomStyles = {
 function Opportunities() {
 
     const [modalIsOpen, setIsOpen] = useState(false);
-    const [filtersModalIsOpen, setFiltersModalIsOpen] = useState(false)
+    const [filtersModalIsOpen, setFiltersModalIsOpen] = useState(false);
+    const [salaryRangeSliderValue, setSalaryRangeSliderValue] = useState(60);
 
     function openModal() {
         setIsOpen(true);
@@ -106,15 +109,25 @@ function Opportunities() {
             >
                  <div id='filters-wrapper'>
                 <form>
-                    <input id='filters-search' type='text' placeholder='Company, Skill, etc.'></input><br></br>
+                    <ReactSearchBox
+                    placeholder="Search"
+                    data={opportunitiesDisplayList}
+                    callback={(record) => {setopportunitiesDisplayList(record)}}
+                    ></ReactSearchBox>
+                    <br></br>
 
-                    <details>
+                    <details open>
                         <summary>Opportunity Details</summary>
-                        <input type='range'></input>
+                        Salary: <input type='range' min={50} max={300} value={salaryRangeSliderValue} onChange={(e) => {
+                            setSalaryRangeSliderValue(e.target.value);
+                            setopportunitiesDisplayList(opportunitiesDisplayList.filter((val) => {
+                                return val.opportunity.payRangeMinInThousands > salaryRangeSliderValue
+                            }))
+                        }}></input> {`$${salaryRangeSliderValue}K`}
                     </details>
 
 
-                    <details>
+                    <details open>
                         <summary>Company Benefits</summary>
                         <input type='checkbox' onChange={(e) => {
                             if(e.target.checked) {
@@ -153,7 +166,10 @@ function Opportunities() {
 
 
                 </form>
-                <button className='filters-cancel-btn' onClick={closeFiltersModal}>Cancel</button>
+                <button className='filters-cancel-btn' onClick={() => {
+                    setopportunitiesDisplayList(opportunitiesList);
+                    setFiltersModalIsOpen(false);
+                }}>Cancel</button>
                 <button className='filters-save-btn' onClick={closeFiltersModal}>View Opportunities {`(${opportunitiesDisplayList.length})`}</button>
             </div>
             </Modal>
