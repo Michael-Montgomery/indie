@@ -4,6 +4,7 @@
 
 #contact-card-modal-wrapper h2 {
     font-size: 1.6em;
+    color: var(--primary)
 }
 
 .contact-card-phone {
@@ -12,4 +13,14 @@
 
 .contact-card-email {
  font-size: 1.4em;
+}
+
+#contact-card-modal-wrapper span {
+    margin-right: 10px;
+    color: var(--primary)
+}
+
+#contact-card-modal-wrapper a {
+    text-decoration: none;
+    color: #4EE6BF;
 }

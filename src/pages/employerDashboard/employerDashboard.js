@@ -8,6 +8,7 @@ import Modal from 'react-modal';
 import OpportunityModal from '../../components/opportunityModal/opportunityModal';
 import users from '../../data/users';
 import ApplicantModal from '../../components/applicantsModal/applicantModal';
+import NewRoleModal from '../../components/newRoleModal/newRoleModal';
 
 
 const customStyles = {
@@ -28,12 +29,17 @@ function EmployerDashboard(props) {
 
 
     const [modalIsOpen, setIsOpen] = useState(false);
+    const [newRoleModalIsOpen, setNewRoleModalIsOpen] = useState(false);
     const [applicantModalIsOpen, setApplicantModalIsOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [usersList, setUsersList] = useState(users);
 
     function openModal() {
         setIsOpen(true);
+    }
+
+    function openNewRoleModal() {
+        setNewRoleModalIsOpen(true)
     }
 
     function afterOpenModal() {
@@ -43,6 +49,10 @@ function EmployerDashboard(props) {
 
     function closeModal() {
         setIsOpen(false);
+    }
+
+    function closeNewRoleModal() {
+        setNewRoleModalIsOpen(false);
     }
 
     function openApplicantModal() {
@@ -56,6 +66,7 @@ function EmployerDashboard(props) {
     return (
         <>
             <Header></Header>
+            <button onClick={openNewRoleModal }>Post new role</button>
             <h2>Employer Dashboard</h2>
             <p>filter and sort</p>
             <table
@@ -115,6 +126,16 @@ function EmployerDashboard(props) {
                 {/* modal content */}
                 <h2>{`Applicants for ${jobsList[selectedIndex].opportunity.title}`}</h2>
                 <ApplicantModal applicants={jobsList[selectedIndex].opportunity.applicants}></ApplicantModal>
+            </Modal>
+            <Modal
+                isOpen={newRoleModalIsOpen}
+                // onAfterOpen={afterOpenModal}
+                onRequestClose={closeNewRoleModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+            >
+                {/* modal content */}
+                <NewRoleModal></NewRoleModal>
             </Modal>
         </>
     )
